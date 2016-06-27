@@ -7,7 +7,6 @@ $(document).ready(function() {
 		var userImage = results.avatar_url;
 		
 		var date = moment(results.created_at).format('MMMM DD,  YYYY');
-		console.log(date);
 
 		//writes the menu avatar pic
 		$(".rightIcons").append('<img alt="@marthafairbanks" class="avatar" src=' + userImage +
@@ -31,6 +30,76 @@ $(document).ready(function() {
 		 '/following">Following</a></span></div>');
 
 	} 
-
 	});
+
+	$.ajax({ url: " https://api.github.com/users/marthafairbanks/repos", success: function success(results) {
+		var repoArray = results;
+
+		function writeRepos(){
+   			repoArray.forEach(function(results) {
+			
+			$(".repoContent").append('<article><div class = "repoStats"><span>' + results.language + 
+			' &nbsp;&nbsp;<a href ="' + results.stargazers_url + '"><img src = "images/star.svg"> ' + 
+			results.stargazers_count + '</a> &nbsp;&nbsp;<a href ="' + results.forks_url + 
+			'"><img src = "images/git-branch.svg"> ' + 
+			results.forks_count + '</a></span></div><div class = "repoDetails"><a href = "' + 
+			results.html_url + '"><h3>' + results.name + '</h3></a><p class = "description">' + 
+			results.description + '</p><p class = "updated">Updated ' + moment(results.updated_at).fromNow() +
+			'</p></div></article>');
+		}
+   	);}
+   			writeRepos();
+	
+
+	} 
+	});
+	
+	$.ajax({ url: "  https://api.github.com/users/marthafairbanks/events", success: function success(results) {
+		var activityArray = results;
+
+		function writeActivity(){
+   			activityArray.forEach(function(results) {
+
+   			if (results.payload.ref_type === "branch") {
+   				$(".publicActivity").append('<article class = "activity">' + 
+   				'<img src = "images/git-branch-activity.svg"><a href = "https://github.com/' + 
+   				results.actor.login + '"> ' + results.actor.display_login + '</a> created ' + 
+   				results.payload.ref_type + ' <a href = "https://github.com/' + results.repo.name +
+   				'/tree/' + results.payload.ref + '"><span class = "branchType">' + results.payload.ref +
+   				'</span></a> at <a href = "https://github.com/' + results.repo.name + '">' + 
+   				results.repo.name + '</a> <span class = "createdAgo">' + moment(results.created_at).fromNow() +
+   				'</span></article>');	
+   			}
+ 
+   			else if (results.payload.ref_type === "repository") {
+   				$(".publicActivity").append('<article class = "activity">' + 
+   				'<img src = "images/repo-activity.svg"><a href = "https://github.com/' + 
+   				results.actor.login + '"> ' + results.actor.display_login + '</a> created ' + 
+   				results.payload.ref_type + ' <a href = "https://github.com/' + results.repo.name + '">' + 
+   				results.repo.name + '</a> <span class = "createdAgo">' + moment(results.created_at).fromNow() +
+   				'</span></article>');
+   			}
+
+   			else {
+   				$(".publicActivity").append('<article class = "pushEvent"><img src = "images/git-commit.svg">' +
+   				'<p><span class = "createdAgo">' + moment(results.created_at).fromNow() +'</span><br>' + 
+   				'<span class = "bold"><a href = "https://github.com/' + results.actor.login + '"> ' + 
+   				results.actor.display_login + '</a> pushed to <a href = "https://github.com/' + 
+   				results.repo.name + '/tree/' + results.payload.ref + '">' + results.payload.ref.slice(11) +
+   				'</span></a> at <a href = "https://github.com/' + results.repo.name + '">' + 
+   				results.repo.name + '</a></span><br><img src = "' + results.actor.avatar_url + 
+   				'"><img src = "images/octoface.svg"></p></article>');
+
+   			}
+
+
+   				
+		}
+   	);}
+   			writeActivity();
+	
+
+	} 
+	});
+
 });		

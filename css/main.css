@@ -15,14 +15,16 @@
   .rowHeader .searchBox {
     padding-top: 10px;
     padding-left: 0; }
-    .rowHeader .searchBox .headerSearchBox {
-      height: 90%;
-      display: inline-block;
-      outline: none; }
-    .rowHeader .searchBox:focus {
-      outline: none;
-      outline-color: transparent;
-      outline-style: none; }
+    .rowHeader .searchBox .form-group {
+      margin-bottom: 10px; }
+      .rowHeader .searchBox .form-group .headerSearchBox {
+        height: 90%;
+        display: inline-block;
+        outline: none; }
+      .rowHeader .searchBox .form-group:focus {
+        outline: none;
+        outline-color: transparent;
+        outline-style: none; }
   .rowHeader .menuList {
     padding-top: 10px;
     padding-left: 0px; }
@@ -38,6 +40,9 @@
         font-size: 13px; }
         .rowHeader .menuList ul li a {
           color: black; }
+          .rowHeader .menuList ul li a:hover {
+            text-decoration: none;
+            color: #4078C0; }
   .rowHeader .rightIcons {
     padding-top: 15px;
     display: inline-block; }
@@ -52,12 +57,12 @@
       margin-left: 15px; }
 
 .rowBody {
+  margin-left: 5%;
+  margin-right: .1%;
   padding-top: 10px; }
   .rowBody .userInfo {
-    display: block;
     float: right;
-    margin: auto;
-    width: 71%; }
+    margin: auto; }
     .rowBody .userInfo .profilePic {
       width: 230px;
       border-radius: 10px; }
@@ -122,57 +127,101 @@ body {
 .noPadding {
   padding: 0px; }
 
-.gitInfo {
-  margin-left: -40px; }
-  .gitInfo .tabs ul li a {
-    color: #767676; }
-  .gitInfo .tabs button.btnEditProfile {
-    background-color: #F5F5F5;
-    border: 1px solid #c2c2c2;
-    float: right;
-    margin-top: -40px;
-    margin-right: 110px; }
-    .gitInfo .tabs button.btnEditProfile:hover {
-      background-color: gainsboro; }
-    .gitInfo .tabs button.btnEditProfile a {
-      color: black;
+.gitInfo .tabs ul li a {
+  color: #767676; }
+
+.gitInfo .tabs button.btnEditProfile {
+  background-color: #F5F5F5;
+  border: 1px solid #c2c2c2;
+  float: right;
+  margin-top: -40px; }
+  .gitInfo .tabs button.btnEditProfile:hover {
+    background-color: gainsboro; }
+  .gitInfo .tabs button.btnEditProfile a {
+    color: black;
+    font-weight: bold; }
+    .gitInfo .tabs button.btnEditProfile a:hover {
+      text-decoration: none; }
+
+.gitInfo .tabs .tab-content {
+  padding-top: 15px;
+  padding-left: 10px; }
+  .gitInfo .tabs .tab-content .repositories .topSearchBar {
+    border-bottom: 1px solid #EEEEEE;
+    margin-left: 0px;
+    height: 50px;
+    padding-bottom: 10px; }
+    .gitInfo .tabs .tab-content .repositories .topSearchBar form {
+      display: inline-block; }
+      .gitInfo .tabs .tab-content .repositories .topSearchBar form .repoSearch {
+        width: 270px; }
+      .gitInfo .tabs .tab-content .repositories .topSearchBar form button {
+        background-color: #F5F5F5;
+        border: 1px solid #c2c2c2;
+        font-weight: bold;
+        margin-top: -56px;
+        margin-left: 275px; }
+        .gitInfo .tabs .tab-content .repositories .topSearchBar form button:hover {
+          background-color: gainsboro; }
+    .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .menuList {
+      margin-left: -45px; }
+      .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .menuList ul {
+        list-style-type: none;
+        padding-top: 6px; }
+        .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .menuList ul li {
+          display: inline-block;
+          padding-left: 5px; }
+          .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .menuList ul li a {
+            color: #4078C0; }
+    .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .newButton {
+      margin-top: -37px;
+      float: right; }
+      .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .newButton .btnNew {
+        background-color: #72CC52;
+        color: white;
+        font-weight: bold;
+        border: 1px solid #57b536; }
+        .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .newButton .btnNew:hover {
+          background-color: #57b536; }
+  .gitInfo .tabs .tab-content .repositories .repoContent article {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #EEEEEE; }
+    .gitInfo .tabs .tab-content .repositories .repoContent article .repoStats span {
+      color: #888888;
+      float: right;
+      font-size: 12px;
       font-weight: bold; }
-      .gitInfo .tabs button.btnEditProfile a:hover {
-        text-decoration: none; }
-  .gitInfo .tabs .tab-content {
-    padding-top: 15px; }
-    .gitInfo .tabs .tab-content .repositories .topSearchBar {
-      border-bottom: 1px solid #EEEEEE;
-      margin-left: 0px;
-      height: 50px;
-      padding-bottom: 10px; }
-      .gitInfo .tabs .tab-content .repositories .topSearchBar form {
-        display: inline-block; }
-        .gitInfo .tabs .tab-content .repositories .topSearchBar form .repoSearch {
-          width: 270px; }
-        .gitInfo .tabs .tab-content .repositories .topSearchBar form button {
-          background-color: #F5F5F5;
-          border: 1px solid #c2c2c2;
-          font-weight: bold;
-          margin-top: -56px;
-          margin-left: 275px; }
-      .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .menuList {
-        margin-left: -80px; }
-        .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .menuList ul {
-          list-style-type: none;
-          padding-top: 6px;
-          padding-left: 15px; }
-          .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .menuList ul li {
-            display: inline-block;
-            padding-left: 5px; }
-            .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .menuList ul li a {
-              color: #4078C0; }
-      .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .newButton {
-        margin-top: -35px;
-        margin-left: 235px; }
-        .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .newButton .btnNew {
-          background-color: #72CC52;
-          color: white;
-          font-weight: bold; }
-          .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .newButton .btnNew img {
-            fill: white; }
+      .gitInfo .tabs .tab-content .repositories .repoContent article .repoStats span a {
+        color: #888888; }
+    .gitInfo .tabs .tab-content .repositories .repoContent article .repoDetails {
+      margin-top: -20px; }
+      .gitInfo .tabs .tab-content .repositories .repoContent article .repoDetails h3 {
+        font-weight: bold; }
+        .gitInfo .tabs .tab-content .repositories .repoContent article .repoDetails h3 a {
+          color: #4078C0; }
+        .gitInfo .tabs .tab-content .repositories .repoContent article .repoDetails h3:hover {
+          color: #4078C0; }
+      .gitInfo .tabs .tab-content .repositories .repoContent article .repoDetails .description {
+        margin-bottom: 5px;
+        font-size: 14px; }
+      .gitInfo .tabs .tab-content .repositories .repoContent article .repoDetails .updated {
+        font-size: 13px;
+        color: #888888; }
+  .gitInfo .tabs .tab-content .publicActivity article {
+    color: #767676;
+    border-bottom: 1px solid gainsboro;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+    .gitInfo .tabs .tab-content .publicActivity article img {
+      padding: 15px; }
+    .gitInfo .tabs .tab-content .publicActivity article a {
+      color: #4078C0; }
+    .gitInfo .tabs .tab-content .publicActivity article .branchType {
+      padding: 2px 6px;
+      font-family: Courier;
+      border-radius: 3px;
+      background-color: #E8F1F6; }
+    .gitInfo .tabs .tab-content .publicActivity article .createdAgo {
+      font-size: 12px;
+      color: #c2c2c2; }

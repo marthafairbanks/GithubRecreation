@@ -1,4 +1,5 @@
 $primaryColor: #F5F5F5;
+$blueLink: #4078C0;
 
 
 .form-control {
@@ -22,16 +23,19 @@ $primaryColor: #F5F5F5;
 	.searchBox{
 		padding-top: 10px;
 		padding-left:0;
-		.headerSearchBox {
-			height: 90%;
-			display: inline-block;
-			outline: none;
-		}	
-			&:focus{
+		.form-group {
+			margin-bottom: 10px;
+			.headerSearchBox {
+				height: 90%;
+				display: inline-block;
 				outline: none;
-				outline-color:transparent;
-				outline-style:none;
-			}
+			}	
+				&:focus{
+					outline: none;
+					outline-color:transparent;
+					outline-style:none;
+				}
+		}		
 		
 	}	
 	.menuList {
@@ -50,6 +54,10 @@ $primaryColor: #F5F5F5;
     			font-size: 13px;
     			a {
     				color: black;
+    				&:hover {
+    					text-decoration: none;
+    					color: $blueLink;
+    				}
     			}
 
     		}	
