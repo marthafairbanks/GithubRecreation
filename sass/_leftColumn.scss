@@ -1,0 +1,86 @@
+.rowBody {
+	padding-top:10px;
+	.userInfo{
+		display: block;
+		float: right;
+		margin: auto;
+		width:71%;
+		.profilePic{
+			width: 230px;
+			border-radius: 10px;
+		}
+		h3{
+			font-weight: bold;
+			padding-bottom: 0px;
+		}
+		h4{
+			color: darken($primaryColor, 50);
+			font-weight: 300;
+			padding-top: 0px;
+		}
+		.newBox{
+			text-transform: uppercase;
+			color: white;
+			background-color: #6CC644;
+			border-radius: 2px;
+			padding: 3px;
+			font-weight: bold;
+			font-size: 10px;
+		}
+		.emailJoined {
+			border-top: 1px solid darken($primaryColor, 5);
+			border-bottom: 1px solid darken($primaryColor, 5);
+			padding-top: 15px;
+			padding-bottom: 15px;
+			line-height: 25px;
+			.mailIcon{
+				padding-right: 5px;
+			}
+			.clockIcon {
+				padding-right: 5px;
+			}
+		}
+		.followersLine {
+			border-bottom: 1px solid darken($primaryColor, 5);
+			padding-top: 15px;
+			padding-bottom: 15px;
+			padding-left: 8px;
+			h3 {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			a {
+				display: inline-block;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+			.followers, .stars{
+				padding-right: 52px;
+				text-align: center;
+			}
+			.followers {
+				padding-left: 25px;
+			}
+
+			.followersText, .starsText, .followingText {
+				padding-right: 15px;
+				font-size: 12px;
+				text-align: center;
+				a {
+					color: darken($primaryColor, 50);
+				}
+			}
+			.followersText {
+				padding-left: 10px;
+			}
+			.starsText {
+				padding-left: 3px;
+			}
+			.followingText {
+				padding-left: 5px;
+			}
+		}	
+
+	}
+}

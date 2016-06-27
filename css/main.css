@@ -1,0 +1,178 @@
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid #c2c2c2; }
+
+.rowHeader {
+  background-color: #F5F5F5;
+  padding-bottom: 0px;
+  border-bottom: 1px solid #c2c2c2;
+  margin-left: -55px; }
+  .rowHeader .githubIcon {
+    padding-top: 10px; }
+    .rowHeader .githubIcon img {
+      width: 30px;
+      float: right; }
+  .rowHeader .searchBox {
+    padding-top: 10px;
+    padding-left: 0; }
+    .rowHeader .searchBox .headerSearchBox {
+      height: 90%;
+      display: inline-block;
+      outline: none; }
+    .rowHeader .searchBox:focus {
+      outline: none;
+      outline-color: transparent;
+      outline-style: none; }
+  .rowHeader .menuList {
+    padding-top: 10px;
+    padding-left: 0px; }
+    .rowHeader .menuList ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      padding-top: 4px; }
+      .rowHeader .menuList ul li {
+        display: inline-block;
+        padding-right: 5px;
+        font-weight: bold;
+        font-size: 13px; }
+        .rowHeader .menuList ul li a {
+          color: black; }
+  .rowHeader .rightIcons {
+    padding-top: 15px;
+    display: inline-block; }
+    .rowHeader .rightIcons img {
+      float: left; }
+    .rowHeader .rightIcons .triangle {
+      width: 13px;
+      padding-left: 4px;
+      padding-top: 4px; }
+    .rowHeader .rightIcons .avatar {
+      width: 20px;
+      margin-left: 15px; }
+
+.rowBody {
+  padding-top: 10px; }
+  .rowBody .userInfo {
+    display: block;
+    float: right;
+    margin: auto;
+    width: 71%; }
+    .rowBody .userInfo .profilePic {
+      width: 230px;
+      border-radius: 10px; }
+    .rowBody .userInfo h3 {
+      font-weight: bold;
+      padding-bottom: 0px; }
+    .rowBody .userInfo h4 {
+      color: #767676;
+      font-weight: 300;
+      padding-top: 0px; }
+    .rowBody .userInfo .newBox {
+      text-transform: uppercase;
+      color: white;
+      background-color: #6CC644;
+      border-radius: 2px;
+      padding: 3px;
+      font-weight: bold;
+      font-size: 10px; }
+    .rowBody .userInfo .emailJoined {
+      border-top: 1px solid #e8e8e8;
+      border-bottom: 1px solid #e8e8e8;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      line-height: 25px; }
+      .rowBody .userInfo .emailJoined .mailIcon {
+        padding-right: 5px; }
+      .rowBody .userInfo .emailJoined .clockIcon {
+        padding-right: 5px; }
+    .rowBody .userInfo .followersLine {
+      border-bottom: 1px solid #e8e8e8;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 8px; }
+      .rowBody .userInfo .followersLine h3 {
+        margin-top: 0;
+        margin-bottom: 0; }
+      .rowBody .userInfo .followersLine a {
+        display: inline-block; }
+        .rowBody .userInfo .followersLine a:hover {
+          text-decoration: none; }
+      .rowBody .userInfo .followersLine .followers, .rowBody .userInfo .followersLine .stars {
+        padding-right: 52px;
+        text-align: center; }
+      .rowBody .userInfo .followersLine .followers {
+        padding-left: 25px; }
+      .rowBody .userInfo .followersLine .followersText, .rowBody .userInfo .followersLine .starsText, .rowBody .userInfo .followersLine .followingText {
+        padding-right: 15px;
+        font-size: 12px;
+        text-align: center; }
+        .rowBody .userInfo .followersLine .followersText a, .rowBody .userInfo .followersLine .starsText a, .rowBody .userInfo .followersLine .followingText a {
+          color: #767676; }
+      .rowBody .userInfo .followersLine .followersText {
+        padding-left: 10px; }
+      .rowBody .userInfo .followersLine .starsText {
+        padding-left: 3px; }
+      .rowBody .userInfo .followersLine .followingText {
+        padding-left: 5px; }
+
+body {
+  font-family: 'Open Sans'; }
+
+.noPadding {
+  padding: 0px; }
+
+.gitInfo {
+  margin-left: -40px; }
+  .gitInfo .tabs ul li a {
+    color: #767676; }
+  .gitInfo .tabs button.btnEditProfile {
+    background-color: #F5F5F5;
+    border: 1px solid #c2c2c2;
+    float: right;
+    margin-top: -40px;
+    margin-right: 110px; }
+    .gitInfo .tabs button.btnEditProfile:hover {
+      background-color: gainsboro; }
+    .gitInfo .tabs button.btnEditProfile a {
+      color: black;
+      font-weight: bold; }
+      .gitInfo .tabs button.btnEditProfile a:hover {
+        text-decoration: none; }
+  .gitInfo .tabs .tab-content {
+    padding-top: 15px; }
+    .gitInfo .tabs .tab-content .repositories .topSearchBar {
+      border-bottom: 1px solid #EEEEEE;
+      margin-left: 0px;
+      height: 50px;
+      padding-bottom: 10px; }
+      .gitInfo .tabs .tab-content .repositories .topSearchBar form {
+        display: inline-block; }
+        .gitInfo .tabs .tab-content .repositories .topSearchBar form .repoSearch {
+          width: 270px; }
+        .gitInfo .tabs .tab-content .repositories .topSearchBar form button {
+          background-color: #F5F5F5;
+          border: 1px solid #c2c2c2;
+          font-weight: bold;
+          margin-top: -56px;
+          margin-left: 275px; }
+      .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .menuList {
+        margin-left: -80px; }
+        .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .menuList ul {
+          list-style-type: none;
+          padding-top: 6px;
+          padding-left: 15px; }
+          .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .menuList ul li {
+            display: inline-block;
+            padding-left: 5px; }
+            .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .menuList ul li a {
+              color: #4078C0; }
+      .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .newButton {
+        margin-top: -35px;
+        margin-left: 235px; }
+        .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .newButton .btnNew {
+          background-color: #72CC52;
+          color: white;
+          font-weight: bold; }
+          .gitInfo .tabs .tab-content .repositories .topSearchBar .rightTopSearchBar .newButton .btnNew img {
+            fill: white; }

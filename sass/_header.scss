@@ -1,0 +1,75 @@
+$primaryColor: #F5F5F5;
+
+
+.form-control {
+	&:focus{
+		box-shadow: none;
+		border: 1px solid darken($primaryColor, 20);
+	}
+}
+.rowHeader {
+	background-color: $primaryColor;
+	padding-bottom: 0px;
+	border-bottom: 1px solid darken($primaryColor, 20); 
+	margin-left: -55px;
+	.githubIcon {
+		padding-top: 10px;
+		img {
+			width: 30px;
+			float: right;
+		}	
+	}
+	.searchBox{
+		padding-top: 10px;
+		padding-left:0;
+		.headerSearchBox {
+			height: 90%;
+			display: inline-block;
+			outline: none;
+		}	
+			&:focus{
+				outline: none;
+				outline-color:transparent;
+				outline-style:none;
+			}
+		
+	}	
+	.menuList {
+		padding-top: 10px;
+		padding-left: 0px;
+		ul {
+			list-style-type: none;
+    		margin: 0;
+    		padding: 0;
+    		padding-top: 4px;
+
+    		li {
+    			display: inline-block;
+    			padding-right: 5px;
+    			font-weight: bold;
+    			font-size: 13px;
+    			a {
+    				color: black;
+    			}
+
+    		}	
+		}
+	}
+	.rightIcons {
+		padding-top: 15px;
+		display: inline-block;
+		img {
+			float: left;
+		}
+		.triangle {
+			width: 13px;
+			padding-left: 4px;
+			padding-top: 4px;
+		}
+		.avatar	{
+			width: 20px;
+			margin-left: 15px;
+		} 		
+	}
+}
+

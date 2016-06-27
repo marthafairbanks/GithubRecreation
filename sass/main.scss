@@ -1,0 +1,101 @@
+$primaryColor: #F5F5F5;
+$blueLink: #4078C0;
+
+@import 'header';
+@import 'leftColumn';
+
+body{
+	font-family: 'Open Sans';
+}
+.noPadding {
+	padding: 0px;
+}
+
+
+.gitInfo {
+	margin-left: -40px;
+	.tabs {
+		ul {
+			li {
+				a {
+					color: darken($primaryColor,50);
+				}
+			}
+		}
+		button.btnEditProfile {
+			background-color: $primaryColor;
+			border: 1px solid darken($primaryColor, 20);
+			float: right;
+			margin-top: -40px;
+			margin-right: 110px;
+			&:hover {
+				background-color: darken($primaryColor, 10);
+			}
+			a {
+				color: black;
+				font-weight: bold;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
+		.tab-content {
+			padding-top: 15px;
+			.repositories {
+				.topSearchBar {
+					border-bottom: 1px solid #EEEEEE;
+					margin-left: 0px;
+					height: 50px;
+					padding-bottom: 10px;
+					form {
+						display: inline-block;
+						.repoSearch{
+							width: 270px;
+						}
+						button {
+							background-color: $primaryColor;
+							border: 1px solid darken($primaryColor, 20);
+							font-weight: bold;
+							margin-top: -56px;
+							margin-left: 275px;
+						}
+					}
+					.rightTopSearchBar {
+						// margin-right: 2px;
+						.menuList {
+							margin-left:-80px;
+							ul {
+								list-style-type: none;
+								padding-top: 6px;
+								padding-left: 15px;
+
+								li {
+									display: inline-block;
+									padding-left: 5px;
+									a {
+										color: $blueLink;
+									}
+								}
+							}
+
+						}
+						.newButton {
+							margin-top: -35px;
+							margin-left: 235px;
+							.btnNew {
+								background-color: #72CC52;
+								color: white;
+								font-weight: bold;
+								img {
+									fill: white;
+								}
+							}		
+
+						}		
+					}
+				}	 	
+			}	
+		}	
+	}
+}	
+

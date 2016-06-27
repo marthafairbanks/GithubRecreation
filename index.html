@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>marthafairbanks (Martha Fairbanks)</title>
+		
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link href= "css/main.css" rel="stylesheet">					
+
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+
+		<script src="https://use.fontawesome.com/64f6e46810.js"></script>	
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	</head>
+	
+	<body>
+		<div class = "container-fluid">
+			
+			<div class = "row rowHeader">
+				<div class = "col-sm-2 githubIcon">
+					<img src="images/mark-github.svg">
+				</div>
+				<div class ="col-sm-4 searchBox">
+					<form>
+						<div class = "form-group">
+							<input type="search" class="form-control headerSearchBox" id="headerSearchBox" placeholder="Search GitHub">
+						</div>
+					</form>
+				</div>
+				<div class ="col-sm-4 menuList">
+					<ul>
+						<li><a href = "#">Pull Requests</a></li>
+						<li><a href = "#">Issues</a></li>
+						<li><a href = "#">Gist</a></li>						
+					</ul>
+				</div>
+				<div class = "col-sm-2 rightIcons">
+					<img src = "images/plus.svg">
+					<img class = "triangle" src = "images/triangle-down.svg">
+				</div>
+			</div>
+
+			<div class = "row rowBody">
+				<div class = "col-sm-4 noPadding">
+					<div class = "userInfo">
+					</div>
+				</div>
+				<div class = "col-sm-8 noPadding">
+					<div class = "gitInfo">
+						<div class = "tabs">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active tabA"><a href="#home" aria-controls="overview" role="tab" data-toggle="tab"><img src="images/person.svg"> Overview</a></li>
+							    <li role="presentation" class="tabA"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><img src="images/repo.svg"> Repositories</a></li>
+							    <li role="presentation" class="tabA"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><img src="images/rss.svg"> Public activity</a></li>
+							</ul>
+
+						  	<button type="button" class="btn btn-secondary btnEditProfile"><a href = "http://www.github.com/account"><img src = "images/pencil.svg"> Edit Profile</a></button>
+
+						  	<!-- Tab panes -->
+						  	<div class="tab-content">
+						    	<div role="tabpanel" class="tab-pane active overview" id="home">home
+						    	</div>
+						    	<div role="tabpanel" class="tab-pane repositories" id="profile">
+						    		<div class = "row topSearchBar">
+										<form class = "col-sm-6 noPadding">
+											<div class = "form-group">
+												<input type="search" class="form-control repoSearch" placeholder="Find a repository..."><button type="button" class="btn btn-secondary btnSearch">Search</button>
+											</div>
+										</form>
+										<div class = "col-sm-6 rightTopSearchBar noPadding">
+											<div class = "menuList">
+												<ul>
+													<li><a href = "#">All</a></li>
+													<li><a href = "#">Public</a></li>
+													<li><a href = "#">Private</a></li>
+													<li><a href = "#">Sources</a></li>
+													<li><a href = "#">Forks</a></li>
+													<li><a href = "#">Mirrors</a></li>
+												</ul>
+											</div>
+											<div class = "newButton">
+												<button type="button" class="btn btn-secondary btnNew"><img src="images/repo-white.svg"> New</button>
+											</div>
+										</div>
+							    	</div>	
+						    	</div>
+						    	<div role="tabpanel" class="tab-pane publicActivity" id="messages">messages
+						    	</div>
+
+						  	</div>
+
+						</div>
+					</div>
+				</div>	
+			</div>
+
+		</div>
+
+
+
+
+		<script src = "https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		 <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		 <script src = "js/moment.js"></script> 
+		<script src = "js/main.js"></script>
+		<script src = "js/github.js"></script>
+	</body>
+</html>
