@@ -82,7 +82,13 @@ $(document).ready(function() {
 
    			else {
 
+   				// var branch = results.payload.ref;
+   				// var branchName = branch.slice(11);
+   				// console.log (branchName);
 
+	   			// var ref = results.payload.head;
+	   			// var id = ref.slice(0, 6);
+	   			// console.log (id);
 
    				$(".publicActivity").append('<article class = "pushEvent"><img class = "icon"' +
    				'src = "images/git-commit.svg"><p><span class = "createdAgo">' + 
