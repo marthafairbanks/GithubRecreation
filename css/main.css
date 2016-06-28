@@ -225,3 +225,12 @@ body {
     .gitInfo .tabs .tab-content .publicActivity article .createdAgo {
       font-size: 12px;
       color: #c2c2c2; }
+  .gitInfo .tabs .tab-content .publicActivity .pushEvent .icon {
+    width: 6%;
+    position: absolute; }
+  .gitInfo .tabs .tab-content .publicActivity .pushEvent .avatar {
+    width: 10%; }
+  .gitInfo .tabs .tab-content .publicActivity .pushEvent p {
+    padding-left: 45px; }
+    .gitInfo .tabs .tab-content .publicActivity .pushEvent p .bold {
+      font-weight: bold; }

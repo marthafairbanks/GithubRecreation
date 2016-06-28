@@ -81,13 +81,17 @@ $(document).ready(function() {
    			}
 
    			else {
-   				$(".publicActivity").append('<article class = "pushEvent"><img src = "images/git-commit.svg">' +
-   				'<p><span class = "createdAgo">' + moment(results.created_at).fromNow() +'</span><br>' + 
-   				'<span class = "bold"><a href = "https://github.com/' + results.actor.login + '"> ' + 
+
+
+
+   				$(".publicActivity").append('<article class = "pushEvent"><img class = "icon"' +
+   				'src = "images/git-commit.svg"><p><span class = "createdAgo">' + 
+   				moment(results.created_at).fromNow() +'</span><br><span class = "bold">' +
+   				'<a href = "https://github.com/' + results.actor.login + '"> ' + 
    				results.actor.display_login + '</a> pushed to <a href = "https://github.com/' + 
-   				results.repo.name + '/tree/' + results.payload.ref + '">' + results.payload.ref.slice(11) +
-   				'</span></a> at <a href = "https://github.com/' + results.repo.name + '">' + 
-   				results.repo.name + '</a></span><br><img src = "' + results.actor.avatar_url + 
+   				results.repo.name + '/tree/' + results.payload.ref + '">' + ' branch' +
+   				'</a> at <a href = "https://github.com/' + results.repo.name + '">' + 
+   				results.repo.name + '</a></span><br><img class = "avatar" src = "' + results.actor.avatar_url + 
    				'"><img src = "images/octoface.svg"></p></article>');
 
    			}

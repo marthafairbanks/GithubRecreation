@@ -15,7 +15,7 @@ gulp.task('sass', function () {
 	)});
 
 gulp.task('lint', function() {
-  return gulp.src('./js/*.js')
+  return gulp.src(['./js/*.js', '!./js/moment.js'])
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });

@@ -158,6 +158,21 @@ body{
 						color: darken($primaryColor, 20);
 					}
 				}
+				.pushEvent {
+					.icon {
+						width: 6%;
+						position: absolute;
+					}
+					.avatar {
+						width: 10%;
+					}
+					p {
+						padding-left: 45px;
+						.bold {
+							font-weight: bold;
+						}
+					}
+				}
 			}	
 		}	
 	}
